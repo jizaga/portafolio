@@ -1,0 +1,97 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+button {
+  background-color: transparent;
+  border: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 2.29px;
+  color: white;
+  position: absolute;
+  right: 0%;
+  padding-right: 16px;
+}
+button.bcontact::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: variables.$celeste;
+  width: 144px;
+  bottom: -10px;
+  left: -2px;
+}
+button.bplinks {
+  position: absolute;
+  text-align: left;
+  left: 0px;
+}
+button.bclinks {
+  position: absolute;
+  text-align: left;
+  left: 171px;
+}
+button.bplinks::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: variables.$celeste;
+  width: 138px;
+  bottom: -10px;
+}
+button.bclinks::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: variables.$celeste;
+  width: 103px;
+  bottom: -10px;
+}
+button.bcontactme::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: variables.$celeste;
+  width: 118px;
+  bottom: -10px;
+}
+button:hover {
+  color: variables.$celeste;
+}
+
+@include mixins.breakpoint(tablet) {
+  button.bheader {
+    left: -73%;
+  }
+  button.bproy {
+    align-self: center;
+  }
+  button.bcontact {
+    right: 18%;
+  }
+
+  @include mixins.breakpoint(desktopxl) {
+    button.bheader {
+      padding-left: 90px;
+    }
+    button.bcontact {
+      right: 150px;
+    }
+    button.bplinks {
+      position: absolute;
+      text-align: left;
+      width: 154px;
+      left: 0%;
+    }
+    button.bclinks {
+      position: absolute;
+      text-align: left;
+      width: 154px;
+      left: 17px;
+      bottom: 23px;
+    }
+  }
+}

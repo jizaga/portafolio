@@ -1,0 +1,457 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.hero__experiencia {
+  padding-left: 14px;
+  padding-right: 16px;
+  margin-bottom: 80px;
+  position: relative;
+
+  &_box {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    h2 {
+      font-size: 32px;
+      font-weight: 500;
+      color: white;
+      text-align: center;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+      color: variables.$blanco;
+      text-align: center;
+    }
+    &-p {
+      padding-bottom: 24px;
+    }
+    div:first-child {
+      padding-top: 40px;
+    }
+    div:last-child {
+      padding-bottom: 40px;
+    }
+  }
+
+  &_ovalos div {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 530px;
+    height: 80px;
+    z-index: -1;
+  }
+  .ovalos-1 {
+    position: absolute;
+    top: 85%;
+    right: -90%;
+  }
+  .ovalos-2 {
+    position: absolute;
+    top: 88%;
+    right: -90%;
+  }
+  .ovalos-3 {
+    position: absolute;
+    top: 91%;
+    right: -90%;
+  }
+  .ovalos-4 {
+    position: absolute;
+    top: 94%;
+    right: -90%;
+  }
+  .ovalos-5 {
+    position: absolute;
+    top: 97%;
+    right: -90%;
+  }
+
+  @include mixins.breakpoint(tablet) {
+    &_box {
+      display: grid;
+      grid-template-columns: 345px 345px;
+      border-bottom: none;
+      margin-bottom: 60px;
+      gap: 52px;
+      &-p {
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+      }
+      &-p h2 {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: 14px;
+      }
+      &-p h3 {
+        font-size: 22px;
+        font-weight: 500;
+        text-align: left;
+      }
+      div.item1 {
+        padding-top: 52px;
+        padding-left: 32px;
+      }
+      div.item2 {
+        padding-top: 52px;
+      }
+      div.item3 {
+        padding-left: 32px;
+      }
+      div.item5 {
+        padding-left: 32px;
+      }
+    }
+
+    div.ovalos-1 {
+      position: absolute;
+      top: 80%;
+      right: -50%;
+    }
+    div.ovalos-2 {
+      position: absolute;
+      top: 83%;
+      right: -50%;
+    }
+    div.ovalos-3 {
+      position: absolute;
+      top: 86%;
+      right: -50%;
+    }
+    div.ovalos-4 {
+      position: absolute;
+      top: 89%;
+      right: -50%;
+    }
+    div.ovalos-5 {
+      position: absolute;
+      top: 92%;
+      right: -50%;
+    }
+  }
+
+  @include mixins.breakpoint(desktopxl) {
+    padding-left: 165px;
+    padding-right: 165px;
+    margin-bottom: 140px;
+    &_box {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 35px;
+      &-p {
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+      }
+      &-p h2 {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: 14px;
+      }
+      &-p h3 {
+        font-size: 22px;
+        font-weight: 500;
+        text-align: left;
+      }
+      div.item1 {
+        padding-top: 52px;
+        padding-left: 0px;
+        padding-bottom: 23px;
+      }
+      div.item2 {
+        padding-bottom: 23px;
+      }
+      div.item3 {
+        padding-top: 52px;
+        padding-left: 0px;
+        padding-bottom: 23px;
+      }
+      div.item5 {
+        padding-left: 0px;
+      }
+    }
+
+    div.ovalos-1 {
+      position: absolute;
+      top: 68%;
+      right: -20%;
+    }
+    div.ovalos-2 {
+      position: absolute;
+      top: 71%;
+      right: -20%;
+    }
+    div.ovalos-3 {
+      position: absolute;
+      top: 74%;
+      right: -20%;
+    }
+    div.ovalos-4 {
+      position: absolute;
+      top: 77%;
+      right: -20%;
+    }
+    div.ovalos-5 {
+      position: absolute;
+      top: 80%;
+      right: -20%;
+    }
+  }
+}
+
+.hero__proyectos {
+  &_encabezado {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 16px 40px 16px;
+    position: relative;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+      color: white;
+    }
+    @include mixins.breakpoint(tablet) {
+      h2 {
+        font-size: 72px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  article {
+    padding: 0px 16px 40px 16px;
+    img {
+      width: 343px;
+      height: 253px;
+      padding-bottom: 20px;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: white;
+      padding-bottom: 7px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: variables.$blanco;
+    }
+  }
+  &_proy_article-desc {
+    div {
+      display: flex;
+      justify-content: left;
+      padding-bottom: 20px;
+      gap: 18px;
+    }
+  }
+  &_proy_article-links {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  @include mixins.breakpoint(tablet) {
+    &_proy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 60px;
+    }
+  }
+
+  @include mixins.breakpoint(desktopxl) {
+    padding-left: 165px;
+    padding-right: 165px;
+    &_encabezado {
+      padding: 0px 0px 80px 0px;
+    }
+    article {
+      padding: 0px 16px 40px 16px;
+      img {
+        width: 540px;
+        height: 400px;
+        padding-bottom: 20px;
+      }
+    }
+    &_proy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 60px;
+    }
+    &_proy_article-links {
+      margin: 0px;
+      bottom: 56%;
+      left: 36%;
+    }
+    article:hover {
+      img {
+        opacity: 0.15;
+      }
+    }
+  }
+}
+
+.hero__contacto {
+  padding: 60px 16px 39px 16px;
+  background-color: variables.$gris;
+  position: relative;
+  padding-bottom: 125px;
+  form div {
+    border-bottom: 1px solid variables.$blanco;
+    padding: 0px 16px 0px 16px;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    color: variables.$blanco;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  input {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: variables.$blanco;
+    border: none;
+    background-color: transparent;
+    width: 242px;
+    height: 43px;
+    &::placeholder {
+      color: variables.$blanco;
+      padding-left: 16px;
+    }
+  }
+
+  textarea {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: variables.$blanco;
+    border: none;
+    width: 313px;
+    background-color: transparent;
+    &::placeholder {
+      color: variables.$blanco;
+      padding-left: 16px;
+    }
+  }
+
+  &_ovalos div {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 530px;
+    height: 80px;
+  }
+  .ovalos-1 {
+    position: absolute;
+    top: 63%;
+    right: 50%;
+  }
+  .ovalos-2 {
+    position: absolute;
+    top: 66%;
+    right: 50%;
+  }
+  .ovalos-3 {
+    position: absolute;
+    top: 69%;
+    right: 50%;
+  }
+  .ovalos-4 {
+    position: absolute;
+    top: 72%;
+    right: 50%;
+  }
+  .ovalos-5 {
+    position: absolute;
+    top: 75%;
+    right: 50%;
+  }
+
+  @include mixins.breakpoint(tablet) {
+    padding: 60px 161px 162px 162px;
+    h2 {
+      font-size: 72px;
+    }
+    p {
+      font-size: 18px;
+    }
+    .ovalos-1 {
+      position: absolute;
+      top: 73%;
+      right: 79%;
+    }
+    .ovalos-2 {
+      position: absolute;
+      top: 76%;
+      right: 79%;
+    }
+    .ovalos-3 {
+      position: absolute;
+      top: 79%;
+      right: 79%;
+    }
+    .ovalos-4 {
+      position: absolute;
+      top: 82%;
+      right: 79%;
+    }
+    .ovalos-5 {
+      position: absolute;
+      top: 85%;
+      right: 79%;
+    }
+  }
+
+  @include mixins.breakpoint(desktopxl) {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 165px 139px 165px;
+  }
+  h2 {
+    font-size: 72px;
+    text-align: left;
+  }
+  p {
+    font-size: 18px;
+    text-align: left;
+    width: 445px;
+  }
+  form {
+    padding-left: 305px;
+  }
+  .ovalos-1 {
+    position: absolute;
+    top: 61%;
+    right: 79%;
+  }
+  .ovalos-2 {
+    position: absolute;
+    top: 64%;
+    right: 79%;
+  }
+  .ovalos-3 {
+    position: absolute;
+    top: 67%;
+    right: 79%;
+  }
+  .ovalos-4 {
+    position: absolute;
+    top: 70%;
+    right: 79%;
+  }
+  .ovalos-5 {
+    position: absolute;
+    top: 73%;
+    right: 79%;
+  }
+}

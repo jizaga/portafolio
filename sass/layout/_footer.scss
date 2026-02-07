@@ -1,0 +1,45 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+footer {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: variables.$gris;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 39px 94px 60px 94px;
+  border-top: 1px solid white;
+  p {
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 32px;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+  }
+  &_icons {
+    display: flex;
+    justify-content: space-between;
+    width: 193px;
+  }
+  &_icons svg:hover path {
+    fill: variables.$celeste;
+  }
+
+  @include mixins.breakpoint(tablet) {
+    flex-direction: row;
+    align-items: center;
+    font-size: 32px;
+    padding-top: 30px 30px 40px 30px;
+  }
+
+  @include mixins.breakpoint(desktopxl) {
+    padding: 47px 165px 92px 165px;
+  }
+}

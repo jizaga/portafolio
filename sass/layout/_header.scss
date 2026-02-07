@@ -1,0 +1,338 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.header__container__c1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px 40px 101px;
+  position: relative;
+
+  &-cv1 {
+    width: 174px;
+    height: 383px;
+    background: rgba(255, 255, 255, 0.01);
+    text-align: center;
+    position: relative;
+
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 32px;
+      color: white;
+      padding: 20px 12.9px 20px 12px;
+    }
+
+    img {
+      position: absolute;
+      width: 174px;
+      height: 242px;
+      bottom: 0%;
+      left: 0%;
+    }
+
+    &-socialmedia-icons {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 49px;
+    }
+
+    &-socialmedia-icons svg:hover path {
+      fill: variables.$celeste;
+    }
+  }
+
+  &-ovalos div {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 530px;
+    height: 80px;
+    z-index: -1;
+  }
+
+  .ovalos-1 {
+    position: absolute;
+    top: 30%;
+    right: 56%;
+  }
+  .ovalos-2 {
+    position: absolute;
+    top: 33%;
+    right: 56%;
+  }
+  .ovalos-3 {
+    position: absolute;
+    top: 36%;
+    right: 56%;
+  }
+  .ovalos-4 {
+    position: absolute;
+    top: 39%;
+    right: 56%;
+  }
+  .ovalos-5 {
+    position: absolute;
+    top: 42%;
+    right: 56%;
+  }
+
+  .circulo {
+    border: 1px solid variables.$blanco;
+    border-radius: 50%;
+    width: 129px;
+    height: 129px;
+    position: absolute;
+    bottom: 10%;
+    right: -17%;
+  }
+
+  @include mixins.breakpoint(tablet) {
+    &-cv1 {
+      width: 322px;
+      height: 600px;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      img {
+        width: 350px;
+        height: 486px;
+      }
+      p {
+        position: absolute;
+        font-size: 32px;
+        left: -130%;
+      }
+      &-socialmedia-icons {
+        display: flex;
+        justify-content: space-between;
+        width: 193px;
+        height: 25px;
+        padding-top: 33px;
+        padding-left: 100px;
+      }
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .ovalos-1 {
+      position: absolute;
+      top: 271%;
+      right: 65%;
+    }
+    .ovalos-2 {
+      position: absolute;
+      top: 311%;
+      right: 65%;
+    }
+    .ovalos-3 {
+      position: absolute;
+      top: 351%;
+      right: 65%;
+    }
+    .ovalos-4 {
+      position: absolute;
+      top: 391%;
+      right: 65%;
+    }
+    .ovalos-5 {
+      position: absolute;
+      top: 431%;
+      right: 65%;
+    }
+
+    .circulo {
+      border: 1px solid variables.$blanco;
+      border-radius: 50%;
+      width: 129px;
+      height: 129px;
+      position: absolute;
+      top: 469px;
+      right: -64px;
+    }
+  }
+
+  @include mixins.breakpoint(desktopxl) {
+    &-cv1 {
+      width: 445px;
+      height: 720px;
+      position: absolute;
+      top: 0px;
+      right: 165px;
+      img {
+        width: 445px;
+        height: 618px;
+      }
+      p {
+        position: absolute;
+        font-size: 32px;
+        left: -663px;
+      }
+      &-socialmedia-icons {
+        display: flex;
+        justify-content: space-between;
+        width: 193px;
+        height: 25px;
+        padding-top: 33px;
+        padding-left: 218px;
+      }
+    }
+    &-ovalos div {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      width: 530px;
+      height: 80px;
+      z-index: -1;
+    }
+
+    .ovalos-1 {
+      position: absolute;
+      top: 254%;
+      right: 72%;
+    }
+    .ovalos-2 {
+      position: absolute;
+      top: 294%;
+      right: 72%;
+    }
+    .ovalos-3 {
+      position: absolute;
+      top: 334%;
+      right: 72%;
+    }
+    .ovalos-4 {
+      position: absolute;
+      top: 374%;
+      right: 72%;
+    }
+    .ovalos-5 {
+      position: absolute;
+      top: 414%;
+      right: 72%;
+    }
+
+    .circulo {
+      border: 1px solid variables.$blanco;
+      border-radius: 50%;
+      width: 129px;
+      height: 129px;
+      position: absolute;
+      bottom: 10%;
+      right: 38%;
+    }
+  }
+}
+
+.header__container__c2 {
+  div {
+    padding: 0px 16px 0px 16px;
+    margin-bottom: 80px;
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      font-style: normal;
+      line-height: 40px;
+      letter-spacing: -1.14px;
+      color: white;
+      text-align: center;
+      padding-bottom: 24px;
+    }
+    h1::before {
+      content: "";
+      position: absolute;
+      height: 4px;
+      background-color: variables.$celeste;
+      width: 225px;
+      bottom: 157px;
+      left: 27%;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 28px;
+      color: variables.$blanco;
+      text-align: center;
+      padding-bottom: 24px;
+    }
+  }
+
+  @include mixins.breakpoint(tablet) {
+    div {
+      width: 445px;
+      padding-left: 32px;
+      h1 {
+        font-size: 72px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 72px;
+        letter-spacing: -1.14px;
+        color: white;
+        text-align: left;
+        width: 455px;
+        padding-top: 151px;
+        padding-bottom: 60px;
+        span {
+          padding-right: 30px;
+        }
+      }
+      h1::before {
+        height: 6px;
+        width: 410px;
+        top: 40%;
+        left: 4%;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 28px;
+        color: variables.$blanco;
+        text-align: left;
+        padding-bottom: 24px;
+      }
+    }
+  }
+
+  @include mixins.breakpoint(desktopxl) {
+    div {
+      width: 706px;
+      padding-left: 165px;
+      margin-bottom: 259px;
+      h1 {
+        font-size: 72px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 72px;
+        letter-spacing: -1.14px;
+        color: white;
+        text-align: left;
+        width: 706px;
+        padding-top: 151px;
+        padding-bottom: 43px;
+      }
+      h1::before {
+        height: 6px;
+        width: 410px;
+        top: 31%;
+        left: 19.5%;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 28px;
+        color: variables.$blanco;
+        width: 460px;
+        text-align: left;
+        padding-bottom: 66px;
+      }
+    }
+  }
+}
