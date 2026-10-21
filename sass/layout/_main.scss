@@ -1,0 +1,210 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.ovalos {
+  overflow: hidden; /* Evita que los óvalos creen barras de scroll si se salen */
+  // Estilos base para todos los óvalos usando un selector parcial de Sass
+  [class^="ovalos__ovalo-"] {
+    border: 1px solid variables.$light-grey;
+    border-radius: 50%;
+    width: 85%;
+    height: 80px;
+    position: absolute;
+    z-index: -1;
+  }
+  // Posicionamiento individual usando la sintaxis & de Sass
+  &__ovalo-1 {
+    top: 14.3%;
+    left: -40%;
+  }
+  &__ovalo-2 {
+    top: 16.3%;
+    left: -40%;
+  }
+  &__ovalo-3 {
+    top: 18.3%;
+    left: -40%;
+  }
+  &__ovalo-4 {
+    top: 20.3%;
+    left: -40%;
+  }
+  &__ovalo-5 {
+    top: 22.3%;
+    left: -40%;
+  }
+  &__ovalo-6 {
+    top: 78%;
+    left: 50%;
+  }
+  &__ovalo-7 {
+    top: 80%;
+    left: 50%;
+  }
+  &__ovalo-8 {
+    top: 82%;
+    left: 50%;
+  }
+  &__ovalo-9 {
+    top: 84%;
+    left: 50%;
+  }
+  &__ovalo-10 {
+    top: 86%;
+    left: 50%;
+  }
+  &__ovalo-11 {
+    top: 65%;
+    left: -40%;
+  }
+  &__ovalo-12 {
+    top: 67%;
+    left: -40%;
+  }
+  &__ovalo-13 {
+    top: 69%;
+    left: -40%;
+  }
+  &__ovalo-14 {
+    top: 71%;
+    left: -40%;
+  }
+  &__ovalo-15 {
+    top: 73%;
+    left: -40%;
+  }
+}
+
+@media (min-width: variables.$bp-tablet) {
+  .ovalos {
+    &__ovalo-1 {
+      top: 13%;
+      left: -55%;
+    }
+    &__ovalo-2 {
+      top: 14.6%;
+      left: -55%;
+    }
+    &__ovalo-3 {
+      top: 16.2%;
+      left: -55%;
+    }
+    &__ovalo-4 {
+      top: 17.8%;
+      left: -55%;
+    }
+    &__ovalo-5 {
+      top: 19.4%;
+      left: -55%;
+    }
+
+    &__ovalo-6 {
+      top: 71%;
+      left: 76%;
+    }
+    &__ovalo-7 {
+      top: 72.8%;
+      left: 76%;
+    }
+    &__ovalo-8 {
+      top: 74.6%;
+      left: 76%;
+    }
+    &__ovalo-9 {
+      top: 76.4%;
+      left: 76%;
+    }
+    &__ovalo-10 {
+      top: 78.2%;
+      left: 76%;
+    }
+
+    &__ovalo-11 {
+      top: 80%;
+      left: -67%;
+    }
+    &__ovalo-12 {
+      top: 81.5%;
+      left: -67%;
+    }
+    &__ovalo-13 {
+      top: 83%;
+      left: -67%;
+    }
+    &__ovalo-14 {
+      top: 84.5%;
+      left: -67%;
+    }
+    &__ovalo-15 {
+      top: 86%;
+      left: -67%;
+    }
+  }
+}
+
+@media (min-width: variables.$bp-desktop) {
+  .ovalos {
+    &__ovalo-1 {
+      top: 11%;
+      left: -53%;
+    }
+    &__ovalo-2 {
+      top: 12.3%;
+      left: -53%;
+    }
+    &__ovalo-3 {
+      top: 13.6%;
+      left: -53%;
+    }
+    &__ovalo-4 {
+      top: 14.9%;
+      left: -53%;
+    }
+    &__ovalo-5 {
+      top: 16.2%;
+      left: -53%;
+    }
+
+    &__ovalo-6 {
+      top: 51%;
+      left: 84%;
+    }
+    &__ovalo-7 {
+      top: 53%;
+      left: 84%;
+    }
+    &__ovalo-8 {
+      top: 55%;
+      left: 84%;
+    }
+    &__ovalo-9 {
+      top: 57%;
+      left: 84%;
+    }
+    &__ovalo-10 {
+      top: 59%;
+      left: 84%;
+    }
+
+    &__ovalo-11 {
+      top: 65%;
+      left: -70%;
+    }
+    &__ovalo-12 {
+      top: 67%;
+      left: -70%;
+    }
+    &__ovalo-13 {
+      top: 69%;
+      left: -70%;
+    }
+    &__ovalo-14 {
+      top: 71%;
+      left: -70%;
+    }
+    &__ovalo-15 {
+      top: 73%;
+      left: -70%;
+    }
+  }
+}

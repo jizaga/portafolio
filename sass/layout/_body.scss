@@ -1,0 +1,10 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+body {
+  overflow-x: hidden;
+  background: variables.$black;
+  color: variables.$white;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-weight: 500;
+}

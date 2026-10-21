@@ -1,0 +1,152 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.footer {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid variables.$white;
+  padding: 39px 0 60px;
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  background: variables.$grey;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  &__wrap {
+    position: relative;
+    padding: 60px 0 87px;
+  }
+
+  &__intro {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    p {
+      max-width: 445px;
+      margin: 20px auto 50px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.contact__form {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 55px;
+  max-width: 445px;
+  margin: auto;
+
+  input,
+  textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: variables.$white;
+    font: inherit;
+    font-size: 1.2rem;
+    letter-spacing: -0.2px;
+    resize: none;
+    padding: 0 16px 16px;
+    border-bottom: 2px solid variables.$white;
+  }
+  textarea {
+    min-height: 135px;
+  }
+  input:focus,
+  textarea:focus {
+    border-bottom: 2px solid variables.$green;
+    margin-bottom: -1px;
+  }
+  button {
+    justify-self: end;
+  }
+  /* Ocultar el mensaje de error por defecto */
+  .error-message {
+    display: none;
+    color: #ff4d4d;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 5px;
+  }
+
+  /* Cuando el usuario escribe y el formato es INVÁLIDO */
+  input:not(:placeholder-shown):invalid {
+    border-bottom-color: #ff4d4d; /* Cambia la línea a rojo */
+  }
+
+  /* Muestra el mensaje de error bajo la línea si es inválido */
+  input:not(:placeholder-shown):invalid ~ .error-message {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (min-width: variables.$bp-tablet) {
+  .contact__wrap {
+    padding: 60px 0 92px;
+  }
+  .contact__intro p {
+    font-size: 1.125rem;
+  }
+  .footer {
+    padding: 30px 30px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: variables.$bp-desktop) {
+  .contact__wrap {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    padding-left: 100px;
+    padding-right: 50px;
+  }
+  .contact__intro {
+    text-align: left;
+    p {
+      font-size: 1.3rem;
+      max-width: 520px;
+      margin: 36px 0 0;
+    }
+    h2 {
+      font-size: 6rem;
+    }
+  }
+  .contact__form {
+    width: 445px;
+    margin: 0;
+  }
+  .footer {
+    padding-left: 100px;
+    padding-right: 50px;
+  }
+}
